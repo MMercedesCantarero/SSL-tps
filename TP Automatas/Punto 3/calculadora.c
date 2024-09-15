@@ -28,7 +28,7 @@ int columna(int c)
 
 int esEstadoFinal(int estado)
 {
-    if(estado == 2 || estado == 4)
+    if(estado == 1)
     {
         return 1;
     }
@@ -37,20 +37,19 @@ int esEstadoFinal(int estado)
 
 int esPalabra(char *cadena)
 {
-    const int tt[6][6] = {
-        {2,2,1,1,5,5},
-        {2,2,5,5,5,5},
-        {5,5,1,1,1,3},
-        {5,4,5,5,5,5},
-        {5,5,1,1,1,3},
-        {5,5,5,5,5,5}
+    const int tt[5][6] = {
+        {1,1,4,4,4,4},
+        {4,4,2,2,2,3},
+        {1,1,4,4,4,4},
+        {4,1,4,4,4,4},
+        {4,4,4,4,4,4}
     };
 
     int estado = 0;
     int i = 0;
     int c = cadena[i];
 
-    while(c != '\0' && estado != 5)
+    while(c != '\0' && estado != 4)
     {
         estado = tt[estado][columna(c)];
         c = cadena[++i];
