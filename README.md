@@ -6,6 +6,4 @@ INTEGRANTES:
 
 208.924-5  Cantarero  Mercedes
 
-167.938-7  Chocobar  Gabriel Franco
-
 203.788-9  Lopez  Joaquin
