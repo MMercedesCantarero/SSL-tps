@@ -1,0 +1,3 @@
+inicio
+	A := B);
+fin
