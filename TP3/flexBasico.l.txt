@@ -11,7 +11,7 @@ constEntera {DIGITO}({DIGITO})*
 
 %%
 
-"const" {return CONST;}   // Agregar esta línea para reconocer la palabra clave "const"
+"const" {return CONST;}   
 ":=" {return ASIGNACION;}
 {constEntera} {yylval.num = atoi(yytext); return CONSTANTE;}
 {IDENTIFICADOR} {return ID;}
