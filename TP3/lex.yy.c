@@ -282,12 +282,13 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 9
-#define YY_END_OF_BUFFER 10
-static yyconst short int yy_accept[17] =
+#define YY_NUM_RULES 10
+#define YY_END_OF_BUFFER 11
+static yyconst short int yy_accept[22] =
     {   0,
-        0,    0,   10,    9,    5,    6,    7,    8,    2,    9,
-        4,    3,    2,    1,    3,    0
+        0,    0,   11,   10,    6,    7,    8,    9,    3,   10,
+        5,    4,    4,    3,    2,    4,    4,    4,    4,    1,
+        0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -301,10 +302,10 @@ static yyconst int yy_ec[256] =
         9,    1,    1,    1,   10,   10,   10,   10,   10,   10,
        10,   10,   10,   10,   10,   10,   10,   10,   10,   10,
        10,   10,   10,   10,   10,   10,   10,   10,   10,   10,
-        1,    1,    1,    1,    1,    1,   10,   10,   10,   10,
+        1,    1,    1,    1,    1,    1,   10,   10,   11,   10,
 
-       10,   10,   10,   10,   10,   10,   10,   10,   10,   10,
-       10,   10,   10,   10,   10,   10,   10,   10,   10,   10,
+       10,   10,   10,   10,   10,   10,   10,   10,   10,   12,
+       13,   10,   10,   10,   14,   15,   10,   10,   10,   10,
        10,   10,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -322,35 +323,40 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[11] =
+static yyconst int yy_meta[16] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    2,    1,    1,    1,    2,
+        2,    2,    2,    2,    2
     } ;
 
-static yyconst short int yy_base[17] =
+static yyconst short int yy_base[23] =
     {   0,
-        0,    0,   16,   17,   17,   17,   17,   17,    8,    4,
-       17,    5,    6,   17,    0,   17
+        0,    0,   24,   25,   25,   25,   25,   25,   17,   13,
+       25,    0,    8,   14,   25,    0,    7,    4,    2,    0,
+       25,   14
     } ;
 
-static yyconst short int yy_def[17] =
+static yyconst short int yy_def[23] =
     {   0,
-       16,    1,   16,   16,   16,   16,   16,   16,   16,   16,
-       16,   16,   16,   16,   12,    0
+       21,    1,   21,   21,   21,   21,   21,   21,   21,   21,
+       21,   22,   22,   21,   21,   22,   22,   22,   22,   22,
+        0,   21
     } ;
 
-static yyconst short int yy_nxt[28] =
+static yyconst short int yy_nxt[41] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,    4,   12,
-       15,   13,   14,   13,   15,   16,    3,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16
+       13,   12,   12,   12,   12,   16,   20,   19,   18,   14,
+       17,   15,   14,   21,    3,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21,   21,   21
     } ;
 
-static yyconst short int yy_chk[28] =
+static yyconst short int yy_chk[41] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-       12,   13,   10,    9,   12,    3,   16,   16,   16,   16,
-       16,   16,   16,   16,   16,   16,   16
+        1,    1,    1,    1,    1,   22,   19,   18,   17,   14,
+       13,   10,    9,    3,   21,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21,   21,   21
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -370,7 +376,7 @@ char *yytext;
 	#include <stdio.h>
 	#include <stdlib.h>
 	#include "y.tab.h"
-#line 374 "lex.yy.c"
+#line 380 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -521,9 +527,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 13 "flexBasico.l.txt"
+#line 12 "flexBasico.l.txt"
 
-#line 527 "lex.yy.c"
+
+#line 534 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -574,13 +581,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 17 )
+				if ( yy_current_state >= 22 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 17 );
+		while ( yy_base[yy_current_state] != 25 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -609,49 +616,54 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 14 "flexBasico.l.txt"
-{return ASIGNACION;}
+{return CONST;}   // Agregar esta línea para reconocer la palabra clave "const"
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 15 "flexBasico.l.txt"
-{yylval.num=atoi(yytext);return CONSTANTE;}
+{return ASIGNACION;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 16 "flexBasico.l.txt"
-{return ID;}
+{yylval.num = atoi(yytext); return CONSTANTE;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 17 "flexBasico.l.txt"
-{return PYCOMA;}
+{return ID;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 18 "flexBasico.l.txt"
-{return PARENIZQUIERDO;}
+{return PYCOMA;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 19 "flexBasico.l.txt"
-{return PARENDERECHO;}
+{return PARENIZQUIERDO;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 20 "flexBasico.l.txt"
-{return SUMA;}
+{return PARENDERECHO;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 21 "flexBasico.l.txt"
-{return RESTA;}
+{return SUMA;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 22 "flexBasico.l.txt"
+{return RESTA;}
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 24 "flexBasico.l.txt"
 ECHO;
 	YY_BREAK
-#line 655 "lex.yy.c"
+#line 667 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -943,7 +955,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 17 )
+			if ( yy_current_state >= 22 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -978,11 +990,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 17 )
+		if ( yy_current_state >= 22 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 16);
+	yy_is_jam = (yy_current_state == 21);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1537,4 +1549,5 @@ int main()
 	return 0;
 	}
 #endif
-#line 22 "flexBasico.l.txt"
+#line 24 "flexBasico.l.txt"
+

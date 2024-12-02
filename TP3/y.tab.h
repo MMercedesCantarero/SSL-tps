@@ -39,25 +39,35 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     ASIGNACION = 258,
-     PYCOMA = 259,
-     SUMA = 260,
-     RESTA = 261,
-     PARENIZQUIERDO = 262,
-     PARENDERECHO = 263,
-     ID = 264,
-     CONSTANTE = 265
+     INICIO = 258,
+     FIN = 259,
+     LEER = 260,
+     ESCRIBIR = 261,
+     ASIGNACION = 262,
+     PYCOMA = 263,
+     SUMA = 264,
+     RESTA = 265,
+     PARENIZQUIERDO = 266,
+     PARENDERECHO = 267,
+     ID = 268,
+     CONSTANTE = 269,
+     CONST = 270
    };
 #endif
 /* Tokens.  */
-#define ASIGNACION 258
-#define PYCOMA 259
-#define SUMA 260
-#define RESTA 261
-#define PARENIZQUIERDO 262
-#define PARENDERECHO 263
-#define ID 264
-#define CONSTANTE 265
+#define INICIO 258
+#define FIN 259
+#define LEER 260
+#define ESCRIBIR 261
+#define ASIGNACION 262
+#define PYCOMA 263
+#define SUMA 264
+#define RESTA 265
+#define PARENIZQUIERDO 266
+#define PARENDERECHO 267
+#define ID 268
+#define CONSTANTE 269
+#define CONST 270
 
 
 
@@ -67,7 +77,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 11 "bisonBasico.y"
+#line 66 "bisonBasico.y"
 
    char* cadena;
    int num;
@@ -75,7 +85,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 79 "y.tab.h"
+#line 89 "y.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
